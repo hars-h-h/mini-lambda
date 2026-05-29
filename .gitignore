@@ -1,0 +1,20 @@
+# Binaries & Build Output
+/server
+*.exe
+*.o
+*.a
+*.so
+
+# Runtime User Data
+/functions/
+
+# Go
+vendor/
+go.sum
+
+# IDE & OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+.env
