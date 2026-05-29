@@ -59,7 +59,8 @@ To ensure that multiple users can safely utilize the FaaS engine, an Authenticat
 │   ├── handlers/         # JWT issuance and validation
 │   └── migrate.sql       # PostgreSQL Schema
 ├── docker-compose.yml    # Runs PostgreSQL and the Auth Service
-└── test_e2e.sh           # Automated integration testing script
+├── test_e2e.sh           # Automated integration testing script
+└── test_cold_warm.sh     # Cold vs warm start latency measurement
 ```
 
 ---
@@ -85,4 +86,10 @@ go run ./cmd/server
 Verify the scaling, warm starts, and authentication all work together in milliseconds:
 ```bash
 bash ./test_e2e.sh
+```
+
+### 5. Measure Cold vs. Warm Start Latency
+Verify the performance improvement of container pooling by comparing the first invocation against subsequent warm calls:
+```bash
+bash ./test_cold_warm.sh
 ```
