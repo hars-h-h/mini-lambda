@@ -1,10 +1,10 @@
-# 🚀 Mini-Lambda (Go FaaS Platform)
+# Mini-Lambda (Go FaaS Platform)
 
 A scalable, multi-tenant Function-as-a-Service (FaaS) platform built in Go. This project allows users to securely register and invoke Python functions in isolated Docker containers, complete with a decoupled authentication layer, token caching, and an intelligent warm-start container pooling system.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 Mini-Lambda is divided into three core components to ensure scalability and separation of concerns:
 
@@ -29,7 +29,7 @@ Functions are executed inside lightweight Docker containers (`faas-runner`) usin
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 .
@@ -54,14 +54,14 @@ Functions are executed inside lightweight Docker containers (`faas-runner`) usin
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 - [Docker](https://www.docker.com/) and Docker Compose
 - [Go 1.22+](https://go.dev/dl/)
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Start the Database and Auth Service
 Spin up PostgreSQL and the Auth service in the background:
@@ -83,7 +83,7 @@ go run ./cmd/server
 
 ---
 
-## 📖 API Usage Guide
+## API Usage Guide
 
 ### Authentication
 You must first register and log in to receive an authorization token.
@@ -132,7 +132,7 @@ You must first register and log in to receive an authorization token.
 
 ---
 
-## 🧪 Testing
+## Testing
 An automated end-to-end integration script is included to test the full lifecycle (registration -> login -> function registration -> token rejection -> successful invocation -> stats).
 
 With the services running, execute:
